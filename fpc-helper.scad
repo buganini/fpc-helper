@@ -8,6 +8,7 @@ module helper(body_width){
     handler_length = 70;
     guide_length = 25;
     block_size = 3;
+    lower_block_size = 5;
     block_zheight = 5;
     inset = 1;
     connector_base_height = 2.5;
@@ -18,8 +19,8 @@ module helper(body_width){
     cube([body_width, handler_length, thickness]);
     translate([0,connector_base_height+primer_handle_thickness,thickness]) cube([body_width,guide_length,primer_thickness]);    
     
-    translate([-block_size,0,0]) cube([block_size,connector_base_height,block_zheight]);
-    translate([body_width,0,0]) cube([block_size,connector_base_height,block_zheight]);
+    translate([-lower_block_size,0,0]) cube([lower_block_size,connector_base_height,block_zheight]);
+    translate([body_width,0,0]) cube([lower_block_size,connector_base_height,block_zheight]);
 
     translate([-block_size,connector_base_height+primer_handle_thickness,0]) cube([block_size+inset,guide_length,block_zheight]);
     translate([body_width-inset,connector_base_height+primer_handle_thickness,0]) cube([block_size+inset,guide_length,block_zheight]);
