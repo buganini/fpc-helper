@@ -5,10 +5,10 @@ width_6p = 7.5;
 width_40p = 24.5;
 
 module helper(body_width){
-    handler_length = 70;
+    handler_length = 35;
     guide_length = 25;
     block_size = 3;
-    lower_block_size = 5;
+    lower_block_size = 3;
     block_zheight = 5;
     inset = 1;
     connector_base_height = 2.5;
